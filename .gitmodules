@@ -1,0 +1,3 @@
+[submodule "kak-lsp"]
+	path = plugins/plug.kak
+	url = https://github.com/kak-lsp/kak-lsp
