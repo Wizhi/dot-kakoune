@@ -26,9 +26,7 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
 	#hook global WinSetOption filetype=(c|cpp) smarttab
 } 
 
-plug "kak-lsp/kak-lsp" do %{
-	cargo install --locked --force --path .
-} config %{
+plug "kak-lsp/kak-lsp" config %{
 	# Uncomment to debug LSP
 	#eval %sh{echo ${kak_opt_lsp_cmd} >> /tmp/kak-lsp.log}
 	#set-option global lsp_cmd "kak-lsp -s %val{session} -vvv --log /tmp/kak-lsp.log"
