@@ -41,6 +41,10 @@ plug "kak-lsp/kak-lsp" config %{
 	}
 }
 
+plug "lePerdu/kakboard" %{
+	hook global WinCreate .* %{ kakboard-enable }
+}
+
 hook global WinCreate ^[^*]+$ %{
     add-highlighter window/ number-lines -hlcursor
 }
