@@ -31,7 +31,7 @@ plug "kak-lsp/kak-lsp" config %{
 	#eval %sh{echo ${kak_opt_lsp_cmd} >> /tmp/kak-lsp.log}
 	#set-option global lsp_cmd "kak-lsp -s %val{session} -vvv --log /tmp/kak-lsp.log"
 
-	hook global WinSetOption filetype=(go|rust) %{
+	hook global WinSetOption filetype=(go|rust|python) %{
 		lsp-enable-window
 		lsp-auto-hover-enable
 
