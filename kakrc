@@ -18,10 +18,15 @@ hook global WinSetOption filetype=go %{
 	set-option buffer indentwidth 0
 }
 
+hook global WinSetOption filetype=python %{
+	set-option buffer tabstop 4
+	set-option buffer indentwidth 4
+}
+
 plug "andreyorst/smarttab.kak" defer smarttab %{
 	set-option global softtabstop 2
 } config %{
-	hook global WinSetOption filetype=(elvish|nim) expandtab
+	hook global WinSetOption filetype=(elvish|nim|python) expandtab
 	#hook global WinSetOption filetype=(makefile|gas) noexpandtab
 	#hook global WinSetOption filetype=(c|cpp) smarttab
 } 
