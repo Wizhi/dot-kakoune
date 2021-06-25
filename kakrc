@@ -46,6 +46,10 @@ plug "kak-lsp/kak-lsp" config %{
 	}
 }
 
+plug "alexherbo2/alacritty.kak" %{
+	alacritty-integration-enable
+}
+
 plug "lePerdu/kakboard" %{
 	hook global WinCreate .* %{ kakboard-enable }
 }
