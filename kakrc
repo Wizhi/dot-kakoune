@@ -8,17 +8,17 @@ plug "raiguard/one.kak" theme config %{
 
 plug "https://git.tchncs.de/notramo/elvish.kak"
 
-hook global WinSetOption filetype=nim %{
+hook global BufSetOption filetype=nim %{
 	set-option buffer tabstop 2
 	set-option buffer indentwidth 2
 }
 
-hook global WinSetOption filetype=go %{
+hook global BufSetOption filetype=go %{
 	set-option buffer tabstop 4
 	set-option buffer indentwidth 0
 }
 
-hook global WinSetOption filetype=python %{
+hook global BufSetOption filetype=python %{
 	set-option buffer tabstop 4
 	set-option buffer indentwidth 4
 }
