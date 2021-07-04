@@ -23,6 +23,10 @@ hook global WinSetOption filetype=python %{
 	set-option buffer indentwidth 4
 }
 
+hook global WinSetOption filetype=json %{
+	set-option buffer formatcmd jq
+}
+
 plug "andreyorst/smarttab.kak" defer smarttab %{
 	set-option global softtabstop 2
 } config %{
