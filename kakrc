@@ -27,6 +27,10 @@ hook global WinSetOption filetype=json %{
 	set-option buffer formatcmd jq
 }
 
+hook global WinSetOption filetype=xml %{
+	set-option buffer formatcmd 'xmllint --format -'
+}
+
 plug "andreyorst/smarttab.kak" defer smarttab %{
 	set-option global softtabstop 2
 } config %{
