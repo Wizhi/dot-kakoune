@@ -66,9 +66,6 @@ hook global WinCreate ^[^*]+$ %{
     add-highlighter window/ number-lines -hlcursor
 }
 
-hook global RegisterModified 'y' %{ nop %sh{
-	printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
-}}
 
 define-command -params 1.. run %{
 	evaluate-commands %sh{
