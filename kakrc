@@ -57,6 +57,7 @@ plug "kak-lsp/kak-lsp" config %{
 	hook global WinSetOption filetype=(go|rust|python) %{
 		lsp-enable-window
 		lsp-auto-hover-enable
+		lsp-stop-on-exit-enable
 
 		hook window BufWritePre .* lsp-formatting-sync
 
