@@ -28,6 +28,11 @@ hook global WinSetOption filetype=python %{
 	set-option window indentwidth 4
 }
 
+hook global WinSetOption filetype=rust %{
+	set-option window tabstop 4
+	set-option window indentwidth 4
+}
+
 hook global WinSetOption filetype=json %{
 	set-option buffer formatcmd jq
 }
@@ -39,7 +44,7 @@ hook global WinSetOption filetype=xml %{
 plug "andreyorst/smarttab.kak" defer smarttab %{
 	set-option global softtabstop 2
 } config %{
-	hook global WinSetOption filetype=(elvish|nim|python) expandtab
+	hook global WinSetOption filetype=(elvish|nim|python|rust) expandtab
 	#hook global WinSetOption filetype=(makefile|gas) noexpandtab
 	#hook global WinSetOption filetype=(c|cpp) smarttab
 } 
