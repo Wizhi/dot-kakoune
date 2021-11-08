@@ -8,6 +8,11 @@ plug "raiguard/one.kak" theme config %{
 
 plug "https://git.tchncs.de/notramo/elvish.kak"
 
+hook global WinSetOption filetype=c %{
+	set-option window tabstop 4
+	set-option window indentwidth 0
+}
+
 hook global WinSetOption filetype=nim %{
 	set-option window tabstop 2
 	set-option window indentwidth 2
